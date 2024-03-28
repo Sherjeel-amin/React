@@ -1,0 +1,21 @@
+There are 4 Life Cycle methods
+
+Mounting - When an instance of a component is being created and inserted into the DOM
+- constructor(props)
+- static getDerivedStateFromProps(props,state)
+- render()
+- componentDidMount()
+
+Updating - When a component is being re-rendered as a result of changes to either its props or state
+- static getDerivedStateFromProps(props,state) - called when component is rerendered
+- shouldComponentUpdate(nextProps, nextState) - compare the state values
+- render()
+- getSnapshotBeforeUpdate(prevProps, prevState)
+- componentDidUpdate(prevProps,prevState,snapshot)
+
+Unmounting - When a component is being removed from the DOM
+- componentWillUnmount - Clean up tasks, removing event handlers, never call setState method
+
+Error Handling - When there is an error during rendering, in a lifecycle method, or in the constructor of any child component
+- getDerivedStateFromError(error)
+- componentDidCatch(error,info)
